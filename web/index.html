@@ -1,8 +1,433 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>Conventional Subjects</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conventional Subjects</title>
+  <meta name="description" content="Conventional Subjects — Clear, predictable communication for your email subject lines." />
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --card:#12161c;
+      --text:#e9eef5;
+      --muted:#a9b4c0;
+      --border:#263040;
+      --accent:#7dd3fc;
+      --warn:#fbbf24;
+      --bad:#fb7185;
+      --good:#34d399;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 980px;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f7fb;
+        --card:#ffffff;
+        --text:#101828;
+        --muted:#475467;
+        --border:#d0d5dd;
+        --accent:#0ea5e9;
+        --shadow: 0 10px 30px rgba(16,24,40,.08);
+      }
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(125,211,252,.18), transparent 60%),
+                  radial-gradient(1000px 500px at 95% 0%, rgba(52,211,153,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:42px 18px 60px}
+    header{
+      padding:26px 22px;
+      border:1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    h1{
+      margin:0 0 6px 0;
+      font-size:clamp(28px, 4vw, 40px);
+      letter-spacing:-0.02em;
+    }
+    header p{
+      margin:0;
+      color:var(--muted);
+      font-size:clamp(14px, 2.2vw, 16px);
+    }
+
+    nav{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 88%, transparent);
+      color:var(--muted);
+      font-size:13px;
+      white-space:nowrap;
+    }
+    .chip span{
+      font-family:var(--mono);
+      color:var(--text);
+      font-size:12px;
+      opacity:.95;
+    }
+
+    main{margin-top:18px; display:grid; gap:14px}
+    section{
+      padding:20px 22px;
+      border:1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    h2{
+      margin:0 0 10px 0;
+      font-size:18px;
+      letter-spacing:-0.01em;
+    }
+    h3{
+      margin:14px 0 6px 0;
+      font-size:15px;
+      color:var(--text);
+    }
+    p{margin:8px 0; color:var(--text)}
+    ul{margin:8px 0 0 20px; padding:0}
+    li{margin:6px 0; color:var(--text)}
+    .muted{color:var(--muted)}
+
+    pre{
+      margin:12px 0 0 0;
+      padding:14px 14px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background: rgba(0,0,0,.18);
+      overflow:auto;
+      font-family:var(--mono);
+      font-size:13px;
+      line-height:1.55;
+    }
+    @media (prefers-color-scheme: light){
+      pre{background:#0b0d10; color:#e9eef5}
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:12px;
+    }
+    @media (min-width: 860px){
+      .grid2{grid-template-columns: 1fr 1fr;}
+    }
+
+    .callout{
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 84%, transparent);
+      color:var(--text);
+    }
+    .callout strong{display:inline-block; margin-bottom:4px}
+    .callout.good{border-color: color-mix(in srgb, var(--good) 40%, var(--border));}
+    .callout.warn{border-color: color-mix(in srgb, var(--warn) 40%, var(--border));}
+    .callout.bad{border-color: color-mix(in srgb, var(--bad) 40%, var(--border));}
+
+    code{
+      font-family:var(--mono);
+      font-size:0.95em;
+      padding:.12em .35em;
+      border-radius:8px;
+      border:1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 88%, transparent);
+    }
+
+    footer{
+      margin-top:16px;
+      padding:18px 22px;
+      border:1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+      border-radius:var(--radius);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .kbd{
+      font-family:var(--mono);
+      border:1px solid var(--border);
+      border-bottom-width:2px;
+      padding:2px 6px;
+      border-radius:8px;
+      background: color-mix(in srgb, var(--card) 88%, transparent);
+      color:var(--text);
+      font-size:12px;
+    }
+  </style>
 </head>
 <body>
-Content goes here - for real this time.
+  <div class="wrap">
+    <header>
+      <h1>Conventional Subjects</h1>
+      <p><em>Clear, predictable communication for your email subject lines</em></p>
+
+      <nav aria-label="Quick links">
+        <a class="chip" href="#purpose"><span>#</span> Purpose</a>
+        <a class="chip" href="#format"><span>#</span> Standard format</a>
+        <a class="chip" href="#tags"><span>#</span> Tags</a>
+        <a class="chip" href="#due-dates"><span>#</span> Due dates</a>
+        <a class="chip" href="#ladder"><span>#</span> Escalation ladder</a>
+        <a class="chip" href="#anti-patterns"><span>#</span> Anti-patterns</a>
+        <a class="chip" href="#when-not"><span>#</span> When not to tag</a>
+        <a class="chip" href="#examples"><span>#</span> Examples</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="purpose">
+        <h2>🎯 Purpose</h2>
+        <p>Conventional Subjects makes email:</p>
+        <ul>
+          <li>Easier to scan</li>
+          <li>Easier to filter</li>
+          <li>Clear about intent</li>
+          <li>Trustworthy about urgency</li>
+        </ul>
+        <p class="muted">It is designed to reduce ambiguity — not add bureaucracy.</p>
+      </section>
+
+      <section id="format">
+        <h2>🧱 Standard Format</h2>
+
+        <div class="grid2">
+          <div class="callout good">
+            <strong>Base</strong><br />
+            <code>[TAG] Short summary</code>
+            <pre>[ACTION] Approve Q2 vendor contract</pre>
+          </div>
+
+          <div class="callout good">
+            <strong>Optional scope</strong><br />
+            <code>[TAG:scope] Short summary</code>
+            <pre>[UPDATE:platform] Migration 80% complete</pre>
+          </div>
+        </div>
+
+        <div class="callout warn" style="margin-top:12px">
+          <strong>Optional deadline (actionable items only)</strong><br />
+          <code>[TAG] Short summary | Due DATE</code>
+          <pre>[REQUEST] Feedback on onboarding checklist | Due Mar 22</pre>
+        </div>
+
+        <h3>Examples</h3>
+        <pre>[ACTION] Approve Q2 vendor contract
+[REQUEST] Feedback on onboarding checklist | Due Mar 22
+[FYI] Office closed Monday
+[UPDATE:platform] Migration 80% complete</pre>
+      </section>
+
+      <section id="tags">
+        <h2>🧭 Core Tags (Approved List)</h2>
+        <p class="muted">Keep this list small and consistent.</p>
+
+        <div class="grid2">
+          <div class="callout">
+            <strong>[ACTION]</strong><br />
+            Recipient must do something.
+          </div>
+          <div class="callout">
+            <strong>[REQUEST]</strong><br />
+            Asking for review, input, or feedback.
+          </div>
+          <div class="callout">
+            <strong>[FYI]</strong><br />
+            Awareness only. No action required.
+          </div>
+          <div class="callout">
+            <strong>[UPDATE]</strong><br />
+            Status or progress update.
+          </div>
+          <div class="callout">
+            <strong>[DECISION]</strong><br />
+            Decision made or needed.
+          </div>
+          <div class="callout">
+            <strong>[REMINDER]</strong><br />
+            Follow-up on prior communication.
+          </div>
+        </div>
+
+        <h3>🛠 Optional Operational Tags</h3>
+        <p class="muted">Use only if relevant to your team.</p>
+        <pre>[RFC]
+[ANNOUNCEMENT]
+[POSTMORTEM]
+[ISSUE]
+[FIX]</pre>
+      </section>
+
+      <section id="due-dates">
+        <h2>📅 Due Date Format</h2>
+        <p>Include deadlines only when:</p>
+        <ul>
+          <li>A real deadline exists</li>
+          <li>Missing it has consequences</li>
+          <li>It is not already handled via calendar invite</li>
+        </ul>
+
+        <h3>Recommended formats</h3>
+        <pre>| Due Mar 15
+| Due Fri 3/15
+| Due 2026-03-15   (best for global teams)</pre>
+
+        <h3>Avoid</h3>
+        <pre>ASAP
+Due 3/4   (ambiguous internationally)</pre>
+      </section>
+
+      <section id="ladder">
+        <h2>📈 Deadline Escalation Ladder</h2>
+        <p class="muted">Deadlines escalate gradually and predictably.</p>
+
+        <h3>🟢 Stage 1 — Initial Assignment</h3>
+        <pre>[ACTION] Submit compliance report | Due Mar 15</pre>
+        <p class="muted">Neutral tone. Clear deadline.</p>
+
+        <h3>🟡 Stage 2 — Reminder (3–5 days prior)</h3>
+        <pre>[REMINDER] Submit compliance report | Due Mar 15</pre>
+        <p class="muted">Do not escalate urgency prematurely.</p>
+
+        <h3>🟠 Stage 3 — Due Soon (1–2 days prior)</h3>
+        <pre>[ACTION] Submit compliance report | Due Tomorrow
+
+[URGENT ACTION] Submit compliance report | Due Mar 15</pre>
+        <p class="muted">Escalate only if necessary.</p>
+
+        <h3>🔴 Stage 4 — Due Today</h3>
+        <pre>[URGENT ACTION] Submit compliance report | Due Today</pre>
+        <p class="muted">No emotional language. No punctuation escalation.</p>
+
+        <h3>⚫ Stage 5 — Overdue</h3>
+        <pre>[ACTION] Submit compliance report | Overdue</pre>
+        <p class="muted">Use <code>[ESCALATION]</code> only if formal escalation is required.</p>
+
+        <h3>Escalation Principles</h3>
+        <ul>
+          <li>Escalate gradually</li>
+          <li>Change only one variable at a time</li>
+          <li>Preserve credibility of <code>[URGENT]</code></li>
+          <li>Don’t over-escalate within the same thread</li>
+          <li>If subject escalation isn’t working, escalate via conversation</li>
+        </ul>
+      </section>
+
+      <section id="anti-patterns">
+        <h2>🚫 Anti-Patterns</h2>
+        <p>Avoid these common mistakes:</p>
+
+        <div class="grid2">
+          <div class="callout bad">
+            <strong>❌ Tag stacking</strong>
+            <pre>[URGENT ACTION REMINDER]</pre>
+            <p class="muted">Use one tag. Two max only if combining urgency.</p>
+          </div>
+
+          <div class="callout bad">
+            <strong>❌ Hiding action inside [FYI]</strong>
+            <p class="muted">If someone must act, use <code>[ACTION]</code>.</p>
+          </div>
+
+          <div class="callout bad">
+            <strong>❌ Vague summaries</strong>
+            <pre>[ACTION] Quick question</pre>
+            <p class="muted">Be specific so subjects stand alone in search results.</p>
+          </div>
+
+          <div class="callout bad">
+            <strong>❌ Inventing new tags</strong>
+            <p class="muted">Stick to the approved list to preserve filterability.</p>
+          </div>
+
+          <div class="callout bad">
+            <strong>❌ Emotional formatting</strong>
+            <pre>[CRITICAL!!!]</pre>
+            <p class="muted">Stay calm and structured. Avoid punctuation escalation.</p>
+          </div>
+
+          <div class="callout bad">
+            <strong>❌ Over-scoping</strong>
+            <pre>[UPDATE:finance-billing-ops-integration]</pre>
+            <p class="muted">Keep scopes short and standardized.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="when-not">
+        <h2>🛑 When NOT to Tag</h2>
+        <p>Do not tag:</p>
+        <ul>
+          <li>Casual 1:1 messages</li>
+          <li>Active thread replies</li>
+          <li>Calendar invites</li>
+          <li>Very small audiences</li>
+          <li>Sensitive/emotional topics</li>
+          <li>Micro-updates</li>
+        </ul>
+
+        <div class="callout warn" style="margin-top:12px">
+          <strong>Rule of thumb</strong><br />
+          If removing the tag does not create ambiguity, don’t use one.
+        </div>
+      </section>
+
+      <section id="best-practices">
+        <h2>🧠 Best Practices</h2>
+        <ul>
+          <li>Tags are ALL CAPS</li>
+          <li>Always bracketed</li>
+          <li>Always first</li>
+          <li>Keep summaries concise (≤ 60 characters when possible)</li>
+          <li>Keep the approved tag list small</li>
+          <li>Use urgency sparingly</li>
+        </ul>
+      </section>
+
+      <section id="examples">
+        <h2>🏢 Example Inbox Snapshot</h2>
+        <pre>[ACTION] Approve 2026 marketing budget | Due Mar 15
+[REQUEST] Review lease compliance memo | Due Mar 22
+[UPDATE:platform] Payments migration 90% complete
+[FYI] Office closed Monday
+[REMINDER] Security training | Due Mar 20
+[DECISION] Vendor selection finalized</pre>
+
+        <div class="callout">
+          <strong>Core Principle</strong><br />
+          Conventional Subjects should reduce cognitive load. If it feels heavy, simplify it.
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>Tip:</strong> In most email clients you can search for <span class="kbd">[ACTION]</span> or <span class="kbd">| Due</span> to quickly find what needs attention.</div>
+    </footer>
+  </div>
 </body>
 </html>
