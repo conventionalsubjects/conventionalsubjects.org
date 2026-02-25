@@ -6,16 +6,16 @@
 
 ## 🎯 Purpose
 
-Conventional Subjects makes email:
+Conventional Subjects makes emails:
 
 * Easier to scan
 * Easier to filter
 * Clear about intent
 * Trustworthy about urgency
 
-It is designed to reduce ambiguity — not add bureaucracy. It is also *not* a substitute for well structured emails that properly convey context and intent.
+It is designed to reduce ambiguity — not add bureaucracy. It is also *not* a substitute for well-structured emails that properly convey context and intent.
 
-The Conventional Subject specification is designed to be a starting point, and can be used as-is, or remixed and adapted to suit particular nuances of your organization.
+The Conventional Subjects specification is designed to be a starting point, and can be used as-is, or remixed and adapted to suit particular nuances of your organization.
 
 ---
 
@@ -29,7 +29,7 @@ The Conventional Subject specification is designed to be a starting point, and c
 ```
 
 **Optional Context**
-`[TAG:CONTEXT] Short summary`
+`[TAG:TYPE] Short summary`
 
 ```
 [UPDATE:platform] Migration 80% complete
@@ -46,13 +46,13 @@ The Conventional Subject specification is designed to be a starting point, and c
 
 ## 🧭 Core Tags 
 
-This list of core tags included in the specification has been kept small on purpose. These four tags form the core of Conventional Subjects:
+This list of core tags has been kept small on purpose. These four tags form the core of Conventional Subjects:
 
 [ACTION] [REMINDER] [FYI] [UPDATE]
 
 There might be a tendency to keep adding more and more tags, but if you get to the point where you need a secret decoder ring to figure out your tagging system, you probably have too many (see optional tags below).
 
-Conventional Subjects suggests the following tags as a starting point, separated into two different categories: 1) Things you are asking of others, and 2) Information you are sharing
+Conventional Subjects suggests the following tags as a starting point, separated into two different categories: 1) Things you are asking of others, and 2) Information you are sharing.
 
 ### Things you are asking of others:
 
@@ -64,7 +64,7 @@ Follow-up on prior communication.
 
 **Optional context with actions**
 
-You can specify what kind of action by adding a context type: `[ACTION:TYPE]`
+You can specify what kind of action by adding a context type: `[ACTION:TYPE]`.
 
 Common types:
 
@@ -81,7 +81,7 @@ Note: Good subject lines often don't need context added. Compare these two examp
 [ACTION] Review new Policies & Procedures
 [ACTION:REVIEW] New Policies & Procedures
 
-Some of this will come down to style preference, but less should be more when it comes to use of tags. Your organization should agree and remain consistent in your use of CONTEXT.
+Some of this will come down to style preference, but less should be more when it comes to use of tags. Your organization should agree and remain consistent in its use of context types.
 
 ### Things you are sharing with others (that don't require action):
 
@@ -124,8 +124,8 @@ Include deadlines only when:
 Examples:
 
 ```
-[ACTION] Review new Policies & Procedures | Due Friday 2/27
-[ACTION:APPROVAL] Please review and approve comps for marketing campaign | Due Monday 12/13
+[ACTION] Review new Policies & Procedures | Due Mar 15
+[ACTION:APPROVAL] Please review and approve comps for marketing campaign | Due 2026-03-15
 ```
 
 ### Avoid
@@ -160,9 +160,7 @@ Do not escalate urgency prematurely.
 ### Stage 3 — Due Soon (1–2 days prior)
 
 ```
-[ACTION] Submit compliance report | Due Tomorrow
-
-[URGENT ACTION] Submit compliance report | Due Mar 15
+[ACTION:URGENT] Submit compliance report | Due Mar 15
 ```
 
 Escalate only if necessary.
@@ -170,7 +168,7 @@ Escalate only if necessary.
 ### Stage 4 — Due Today
 
 ```
-[URGENT ACTION] Submit compliance report | Due Today
+[ACTION:URGENT] Submit compliance report | Due Mar 15
 ```
 
 No emotional language. No punctuation escalation.
@@ -181,13 +179,13 @@ No emotional language. No punctuation escalation.
 [ACTION] Submit compliance report | Overdue
 ```
 
-Use `[ESCALATION]` only if formal escalation is required.
+Use formal escalation only if it is required.
 
 ### Escalation Principles
 
 * Escalate gradually
 * Change only one variable at a time
-* Preserve credibility of `[URGENT]`
+* Preserve credibility of urgent tags
 * Don't over-escalate within the same thread
 * If subject escalation isn't working, escalate via conversation
 
@@ -200,10 +198,10 @@ Avoid these common mistakes:
 **❌ Tag stacking**
 
 ```
-[URGENT ACTION REMINDER]
+[ACTION][REMINDER]
 ```
 
-Use one tag. Two max only if combining urgency.
+Use one tag. Add urgency as a context type when needed (for example, `[ACTION:URGENT]`).
 
 **❌ Hiding action inside [FYI]**
 
@@ -244,7 +242,7 @@ Keep scopes short and standardized.
 Do not tag:
 
 * Casual 1:1 messages
-* Active thread replies
+* Active thread replies (unless updating the subject for escalation)
 * Calendar invites
 * Very small audiences
 * Sensitive/emotional topics
@@ -270,11 +268,11 @@ If removing the tag does not create ambiguity, don't use one.
 
 ```
 [ACTION] Approve 2026 marketing budget | Due Mar 15
-[REQUEST] Review lease compliance memo | Due Mar 22
+[ACTION:REVIEW] Review lease compliance memo | Due Mar 22
 [UPDATE:platform] Payments migration 90% complete
 [FYI] Office closed Monday
 [REMINDER] Security training | Due Mar 20
-[DECISION] Vendor selection finalized
+[UPDATE] Vendor selection finalized
 ```
 
 **Core Principle**
