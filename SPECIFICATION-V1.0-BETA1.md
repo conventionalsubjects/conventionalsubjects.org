@@ -169,7 +169,9 @@ Due 3/4   (ambiguous internationally)
 
 ---
 
-## 📈 Deadline Escalation Ladder
+## 📈 Deadline Escalation Ladder (Advanced)
+
+⚠️ **New to Conventional Subjects?** You can skip this section and come back later.
 
 Deadlines escalate gradually and predictably.
 
