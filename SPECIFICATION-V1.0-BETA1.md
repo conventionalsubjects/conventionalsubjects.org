@@ -273,6 +273,9 @@ Keep scopes short and standardized.
 
 ## 🧠 Best Practices
 
+**⭐ Core Principle: Less is More**  
+Good subject lines often don't need context added. If the tag doesn't add clarity, skip it.
+
 * Tags are ALL CAPS
 * Always bracketed
 * Always first
