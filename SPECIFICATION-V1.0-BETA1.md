@@ -44,6 +44,22 @@ The Conventional Subjects specification is designed to be a starting point, and 
 
 ---
 
+## 🏢 Example Inbox Snapshot
+
+```
+[ACTION] Approve 2026 marketing budget | Due Mar 15
+[ACTION:REVIEW] Review lease compliance memo | Due Mar 22
+[UPDATE:platform] Payments migration 90% complete
+[FYI] Office closed Monday
+[REMINDER] Security training | Due Mar 20
+[UPDATE] Vendor selection finalized
+```
+
+**Core Principle**
+Conventional Subjects should reduce cognitive load. If it feels heavy, simplify it.
+
+---
+
 ## 🧭 Core Tags 
 
 This list of core tags has been kept small on purpose. These four tags form the core of Conventional Subjects:
@@ -261,22 +277,6 @@ If removing the tag does not create ambiguity, don't use one.
 * Keep summaries concise (≤ 60 characters when possible)
 * Keep the approved tag list small
 * Use urgency sparingly
-
----
-
-## 🏢 Example Inbox Snapshot
-
-```
-[ACTION] Approve 2026 marketing budget | Due Mar 15
-[ACTION:REVIEW] Review lease compliance memo | Due Mar 22
-[UPDATE:platform] Payments migration 90% complete
-[FYI] Office closed Monday
-[REMINDER] Security training | Due Mar 20
-[UPDATE] Vendor selection finalized
-```
-
-**Core Principle**
-Conventional Subjects should reduce cognitive load. If it feels heavy, simplify it.
 
 ---
 
