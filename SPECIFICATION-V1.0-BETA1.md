@@ -124,9 +124,9 @@ Awareness only.
 You are sharing a status or progress update.
 
 
-### 🛠 Optional Tags
+### 🛠 Team-Specific Tags
 
-Optional tags may be used outside of the core tags where they provide meaning, relevant information to your organization or team. For example, software engineering teams may find the following tags useful:
+Beyond the core tags and optional context types (like `[ACTION:REVIEW]`), teams may add specialized tags where they provide meaningful, relevant information to your organization. For example, software engineering teams may find the following tags useful:
 
 ```
 [RFC]
