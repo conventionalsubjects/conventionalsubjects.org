@@ -322,4 +322,18 @@ Good subject lines often don't need context added. If the tag doesn't add clarit
 
 ---
 
+## 🚀 Getting Started
+
+**Adopting Conventional Subjects in your organization:**
+
+1. **Start simple** — Begin with just the 4 core tags: `[ACTION]` `[REMINDER]` `[FYI]` `[UPDATE]`
+2. **Agree on context types** — If needed, choose 2-3 context types (like `[ACTION:REVIEW]`) and standardize across your team
+3. **Lead by example** — Have managers and team leads model the behavior in their emails
+4. **Review and simplify** — After 30 days, gather feedback and remove anything that isn't adding value
+5. **Adapt to your needs** — This spec is a starting point; remix it to fit your organization's culture
+
+**Remember:** The goal is to reduce cognitive load, not add bureaucracy. If it feels heavy, you're doing too much.
+
+---
+
 > **Tip:** In most email clients you can search for `[ACTION]` or `| Due` to quickly find what needs attention.
