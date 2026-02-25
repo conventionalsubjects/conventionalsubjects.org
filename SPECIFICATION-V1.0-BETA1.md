@@ -285,4 +285,41 @@ Good subject lines often don't need context added. If the tag doesn't add clarit
 
 ---
 
+## 📋 Quick Reference
+
+**Core Tags**
+```
+[ACTION]    You are requesting that the recipient do something
+[REMINDER]  Follow-up on prior communication
+[FYI]       Awareness only
+[UPDATE]    Status or progress update
+```
+
+**Format Patterns**
+```
+[TAG] Summary
+[TAG:TYPE] Summary
+[TAG] Summary | Due DATE
+```
+
+**Common Context Types**
+```
+[ACTION:DECISION]   A decision is needed
+[ACTION:REVIEW]     Review is needed
+[ACTION:APPROVAL]   Approval is needed
+[REMINDER:URGENT]   Urgent reminder (use sparingly)
+```
+
+**Due Date Formats**
+```
+| Due Mar 15
+| Due Fri 3/15
+| Due 2026-03-15   (best for global teams)
+```
+
+**Golden Rule**
+> If removing the tag doesn't create ambiguity, don't use one.
+
+---
+
 > **Tip:** In most email clients you can search for `[ACTION]` or `| Due` to quickly find what needs attention.
