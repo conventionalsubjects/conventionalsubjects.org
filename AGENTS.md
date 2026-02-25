@@ -15,20 +15,25 @@ Conventional Subjects is a specification (like Conventional Commits) for standar
 
 1. **Purpose** — Why this exists and what problem it solves
 2. **Standard Format** — Three patterns: base, scoped (context type), deadline
-3. **Core Tags** — The 4 approved tags + optional context types
-4. **Due Date Format** — Recommended formats (ISO 8601 preferred) + anti-patterns
-5. **Escalation Ladder** — 5-stage progression with principles
-6. **Anti-Patterns** — Common mistakes with bad examples
-7. **Best Practices** — Concise dos
-8. **Inbox Snapshot** — Real-world multi-tag example
+3. **Example Inbox Snapshot** — Real-world multi-tag example shown early to set context
+4. **When NOT to Tag** — Boundaries set upfront to prevent over-application
+5. **Core Tags** — The 4 approved tags + optional context types
+6. **Team-Specific Tags** — Examples for Marketing, Sales, Operations, Leadership, Engineering
+7. **Due Date Format** — Recommended formats (ISO 8601 preferred) + anti-patterns
+8. **Anti-Patterns** — Common mistakes with bad examples
+9. **Best Practices** — Concise dos with minimalism principle
+10. **Escalation Ladder (Advanced)** — 5-stage progression (moved late, marked optional for beginners)
+11. **Quick Reference** — One-page cheat sheet with format patterns and golden rule
+12. **Getting Started** — 5-step adoption guide for organizations
 
 ## Editing Rules
 
 **Consistency Checks Before Any Edit**:
-- Every tag used in examples must be defined in Core Tags or Optional Context Types
+- Every tag used in examples must be defined in Core Tags, Optional Context Types, or Team-Specific Tags
 - Due-date examples must use only the "Recommended formats" list
 - Urgency is expressed as `[TAG:URGENT]` context type, never tag stacking like `[URGENT ACTION]`
-- Scopes must stay short and standardized (reject lengthy scopes like `[UPDATE:finance-billing-ops-integration]`)
+- Context types (like `[ACTION:REVIEW]`) must stay short and standardized
+- Team-specific tags are examples only—not all teams need custom tags
 
 **Writing Style**:
 - Direct, conversational tone with emoji section headers
@@ -50,9 +55,10 @@ Conventional Subjects is a specification (like Conventional Commits) for standar
 ## Conventions
 
 - Tags: `[TAG]` - uppercase, bracketed, always first in subject
-- Scopes: `[TAG:TYPE]` - lowercase type, short and standardized
+- Context types: `[TAG:TYPE]` - lowercase type, short and standardized (e.g., `[ACTION:REVIEW]`)
 - Dates: `| Due Mar 15` or `| Due 2026-03-15` (ISO for global teams)
 - No abbreviations or shortcuts in core examples (keep them explicit for clarity)
+- Escalation uses context-style urgency: `[ACTION:URGENT]` not `[URGENT ACTION]`
 
 ## Git & Commits
 
