@@ -60,6 +60,22 @@ Conventional Subjects should reduce cognitive load. If it feels heavy, simplify 
 
 ---
 
+## 🛑 When NOT to Tag
+
+Do not tag:
+
+* Casual 1:1 messages
+* Active thread replies (unless updating the subject for escalation)
+* Calendar invites
+* Very small audiences
+* Sensitive/emotional topics
+* Micro-updates
+
+**Rule of thumb**
+If removing the tag does not create ambiguity, don't use one.
+
+---
+
 ## 🧭 Core Tags 
 
 This list of core tags has been kept small on purpose. These four tags form the core of Conventional Subjects:
@@ -250,22 +266,6 @@ Stay calm and structured. Avoid punctuation escalation.
 ```
 
 Keep scopes short and standardized.
-
----
-
-## 🛑 When NOT to Tag
-
-Do not tag:
-
-* Casual 1:1 messages
-* Active thread replies (unless updating the subject for escalation)
-* Calendar invites
-* Very small audiences
-* Sensitive/emotional topics
-* Micro-updates
-
-**Rule of thumb**
-If removing the tag does not create ambiguity, don't use one.
 
 ---
 
