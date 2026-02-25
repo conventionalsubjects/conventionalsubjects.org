@@ -43,8 +43,8 @@
     body{
       margin:0;
       font-family:var(--sans);
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(125,211,252,.18), transparent 60%),
-                  radial-gradient(1000px 500px at 95% 0%, rgba(52,211,153,.10), transparent 55%),
+      background: radial-gradient(120vw 60vh at 20% -10%, rgba(125,211,252,.18), transparent 60%),
+                  radial-gradient(100vw 50vh at 95% 0%, rgba(52,211,153,.10), transparent 55%),
                   var(--bg);
       color:var(--text);
       line-height:1.6;
@@ -81,18 +81,19 @@
       display:inline-flex;
       align-items:center;
       gap:8px;
-      padding:7px 10px;
+      padding:10px 14px;
+      min-height:44px;
       border-radius:999px;
       border:1px solid var(--border);
       background: color-mix(in srgb, var(--card) 88%, transparent);
       color:var(--muted);
-      font-size:13px;
+      font-size:clamp(13px, 3vw, 14px);
       white-space:nowrap;
     }
     .chip span{
       font-family:var(--mono);
       color:var(--text);
-      font-size:12px;
+      font-size:clamp(12px, 2.8vw, 13px);
       opacity:.95;
     }
 
@@ -125,9 +126,11 @@
       border:1px solid var(--border);
       border-radius:12px;
       background: rgba(0,0,0,.18);
-      overflow:auto;
+      overflow-x:auto;
+      overflow-wrap:anywhere;
+      word-break:break-word;
       font-family:var(--mono);
-      font-size:13px;
+      font-size:clamp(13px, 3vw, 14px);
       line-height:1.55;
     }
     @media (prefers-color-scheme: light){
@@ -162,6 +165,8 @@
       border-radius:8px;
       border:1px solid var(--border);
       background: color-mix(in srgb, var(--card) 88%, transparent);
+      word-wrap:break-word;
+      overflow-wrap:anywhere;
     }
 
     footer{
@@ -171,7 +176,7 @@
       background: color-mix(in srgb, var(--card) 92%, transparent);
       border-radius:var(--radius);
       color:var(--muted);
-      font-size:13px;
+      font-size:clamp(13px, 3vw, 14px);
     }
     .kbd{
       font-family:var(--mono);
@@ -181,7 +186,38 @@
       border-radius:8px;
       background: color-mix(in srgb, var(--card) 88%, transparent);
       color:var(--text);
-      font-size:12px;
+      font-size:clamp(12px, 2.8vw, 13px);
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 480px){
+      :root{
+        --radius: 12px;
+      }
+      .wrap{
+        padding:24px 14px 40px;
+      }
+      header{
+        padding:20px 16px;
+      }
+      section{
+        padding:16px 16px;
+      }
+      body{
+        background: var(--bg);
+      }
+      h2{
+        font-size:17px;
+      }
+      h3{
+        font-size:14px;
+      }
+      nav{
+        gap:6px;
+      }
+      .grid2{
+        gap:10px;
+      }
     }
   </style>
 </head>
