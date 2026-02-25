@@ -53,6 +53,14 @@ Conventional Subjects is a specification (like Conventional Commits) for standar
 - Both must stay in sync; Markdown is editable, HTML is generated or manually mirrored
 - **Version consistency**: The version badge in web/index.html (`<div class="version">V1.0-BETA1</div>`) must match the specification filename. When creating a new version (e.g., V2.0), update both the filename and the HTML badge.
 
+## Licensing
+
+This project uses dual licensing:
+- **Specification content** (SPECIFICATION-V1.0-BETA1.md and documentation): [Creative Commons CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) — freely adaptable and remixable with attribution
+- **Repository code** (web/index.html, CSS, scripts, implementation): [MIT License](LICENSE) — open source software license
+
+This approach matches [Conventional Commits](https://github.com/conventional-commits/conventionalcommits.org) and allows the specification to be adapted while keeping implementation code freely usable.
+
 ## Web Implementation
 
 **CSS Conventions**:

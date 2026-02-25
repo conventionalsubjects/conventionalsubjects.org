@@ -53,7 +53,8 @@ Conventional Subjects is designed to be a **starting point** — adaptable to an
 
 ## 📄 License
 
-Creative Commons [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+- **Specification content** (SPECIFICATION-V1.0-BETA1.md): [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+- **Repository code** (web/, scripts, implementation): [MIT License](LICENSE)
 
 ---
 
