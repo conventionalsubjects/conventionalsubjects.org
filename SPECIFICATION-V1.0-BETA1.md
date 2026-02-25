@@ -126,13 +126,43 @@ You are sharing a status or progress update.
 
 ### 🛠 Team-Specific Tags
 
-Beyond the core tags and optional context types (like `[ACTION:REVIEW]`), teams may add specialized tags where they provide meaningful, relevant information to your organization. For example, software engineering teams may find the following tags useful:
+Beyond the core tags and optional context types (like `[ACTION:REVIEW]`), teams may add specialized tags where they provide meaningful, relevant information to your organization. Choose only what adds value—not every team needs custom tags.
 
+**Marketing Teams**
 ```
-[RFC]
-[POSTMORTEM]
-[ISSUE]
-[FIX]
+[CAMPAIGN]     Campaign planning or execution
+[CREATIVE]     Creative review or brainstorming
+[BRIEF]        Creative or project brief
+[LAUNCH]       Product or campaign launch coordination
+```
+
+**Engineering Teams**
+```
+[RFC]          Request for comments
+[POSTMORTEM]   Incident analysis
+[ISSUE]        Bug or issue tracking
+[FIX]          Bug fix notification
+```
+
+**Sales Teams**
+```
+[PROSPECT]     Prospect-related communication
+[DEAL]         Deal progress or negotiation
+[PIPELINE]     Pipeline review or forecast
+```
+
+**Operations/HR**
+```
+[POLICY]       Policy updates or changes
+[ONBOARDING]   New hire onboarding
+[SYSTEM]       System updates or maintenance
+```
+
+**Leadership**
+```
+[STRATEGIC]    Strategic planning or decision
+[BUDGET]       Budget planning or approval
+[INITIATIVE]   Company-wide initiative
 ```
 
 ---
