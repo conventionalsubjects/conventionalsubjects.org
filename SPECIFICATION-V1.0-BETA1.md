@@ -183,13 +183,6 @@ Include deadlines only when:
 | Due 2026-03-15   (best for global teams)
 ```
 
-Examples:
-
-```
-[ACTION] Review new Policies & Procedures | Due Mar 15
-[ACTION:APPROVAL] Please review and approve comps for marketing campaign | Due 2026-03-15
-```
-
 ### Avoid
 
 ```
