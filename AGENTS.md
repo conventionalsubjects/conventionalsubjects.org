@@ -52,6 +52,33 @@ Conventional Subjects is a specification (like Conventional Commits) for standar
 - **web/index.html**: Rendered semantic HTML version with styling
 - Both must stay in sync; Markdown is editable, HTML is generated or manually mirrored
 
+## Web Implementation
+
+**CSS Conventions**:
+- Use CSS custom properties (`:root` variables) for theming (colors, spacing, fonts)
+- Use `clamp()` for responsive typography that scales smoothly across viewports
+- Flexbox for layouts (navigation, footer, callouts)
+- Grid for section layouts that need to switch from 1-column (mobile) to multi-column (desktop)
+
+**Mobile Responsiveness Requirements**:
+- Test at minimum widths: 320px (iPhone SE), 360px (Android), 375px (iPhone), 414px (larger phones)
+- Ensure no horizontal scrolling at any viewport width
+- All text content must have `overflow-wrap:break-word` and `word-wrap:break-word`
+- `<pre>` blocks must use `white-space:pre-wrap` for proper text wrapping
+- Touch targets minimum 44px height (iOS/Android accessibility guidelines)
+- Add mobile-specific media query at `@media (max-width: 480px)` for tighter spacing
+
+**Footer Structure**:
+- Flexbox with `justify-content:space-between` for horizontal layout
+- License information on left (heading + Creative Commons CC BY 3.0 link)
+- GitHub icon link on right
+- Wraps to vertical stack on mobile with `flex-wrap:wrap`
+- External links use `target="_blank"` and `rel="noopener noreferrer"`
+
+**External Links**:
+- GitHub repository: https://github.com/conventionalsubjects/conventionalsubjects.org
+- License: https://creativecommons.org/licenses/by/3.0/
+
 ## Conventions
 
 - Tags: `[TAG]` - uppercase, bracketed, always first in subject
