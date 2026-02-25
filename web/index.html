@@ -194,26 +194,30 @@
       <nav aria-label="Quick links">
         <a class="chip" href="#purpose"><span>#</span> Purpose</a>
         <a class="chip" href="#format"><span>#</span> Standard format</a>
+        <a class="chip" href="#example-inbox"><span>#</span> Example inbox</a>
+        <a class="chip" href="#when-not"><span>#</span> When not to tag</a>
         <a class="chip" href="#tags"><span>#</span> Tags</a>
         <a class="chip" href="#due-dates"><span>#</span> Due dates</a>
-        <a class="chip" href="#ladder"><span>#</span> Escalation ladder</a>
         <a class="chip" href="#anti-patterns"><span>#</span> Anti-patterns</a>
-        <a class="chip" href="#when-not"><span>#</span> When not to tag</a>
-        <a class="chip" href="#examples"><span>#</span> Examples</a>
+        <a class="chip" href="#best-practices"><span>#</span> Best practices</a>
+        <a class="chip" href="#ladder"><span>#</span> Escalation (Advanced)</a>
+        <a class="chip" href="#quick-ref"><span>#</span> Quick Reference</a>
+        <a class="chip" href="#getting-started"><span>#</span> Getting Started</a>
       </nav>
     </header>
 
     <main>
       <section id="purpose">
         <h2>🎯 Purpose</h2>
-        <p>Conventional Subjects makes email:</p>
+        <p>Conventional Subjects makes emails:</p>
         <ul>
           <li>Easier to scan</li>
           <li>Easier to filter</li>
           <li>Clear about intent</li>
           <li>Trustworthy about urgency</li>
         </ul>
-        <p class="muted">It is designed to reduce ambiguity — not add bureaucracy.</p>
+        <p class="muted">It is designed to reduce ambiguity — not add bureaucracy. It is also <em>not</em> a substitute for well-structured emails that properly convey context and intent.</p>
+        <p class="muted">The Conventional Subjects specification is designed to be a starting point, and can be used as-is, or remixed and adapted to suit particular nuances of your organization.</p>
       </section>
 
       <section id="format">
@@ -227,49 +231,70 @@
           </div>
 
           <div class="callout good">
-            <strong>Optional scope</strong><br />
-            <code>[TAG:scope] Short summary</code>
+            <strong>Optional Context</strong><br />
+            <code>[TAG:TYPE] Short summary</code>
             <pre>[UPDATE:platform] Migration 80% complete</pre>
           </div>
         </div>
 
         <div class="callout warn" style="margin-top:12px">
-          <strong>Optional deadline (actionable items only)</strong><br />
+          <strong>Optional Deadline (actionable items only)</strong><br />
           <code>[TAG] Short summary | Due DATE</code>
-          <pre>[REQUEST] Feedback on onboarding checklist | Due Mar 22</pre>
+          <pre>[ACTION] Feedback on onboarding checklist | Due Mar 22</pre>
         </div>
 
         <h3>Examples</h3>
         <pre>[ACTION] Approve Q2 vendor contract
-[REQUEST] Feedback on onboarding checklist | Due Mar 22
+[UPDATE:platform] Migration 80% complete
 [FYI] Office closed Monday
-[UPDATE:platform] Migration 80% complete</pre>
+[ACTION] Feedback on onboarding checklist | Due Mar 22</pre>
+      </section>
+
+      <section id="example-inbox">
+        <h2>🏢 Example Inbox Snapshot</h2>
+        <pre>[ACTION] Approve 2026 marketing budget | Due Mar 15
+[ACTION:REVIEW] Review lease compliance memo | Due Mar 22
+[UPDATE:platform] Payments migration 90% complete
+[FYI] Office closed Monday
+[REMINDER] Security training | Due Mar 20
+[UPDATE] Vendor selection finalized</pre>
+
+        <div class="callout">
+          <strong>Core Principle</strong><br />
+          Conventional Subjects should reduce cognitive load. If it feels heavy, simplify it.
+        </div>
+      </section>
+
+      <section id="when-not">
+        <h2>🛑 When NOT to Tag</h2>
+        <p>Do not tag:</p>
+        <ul>
+          <li>Casual 1:1 messages</li>
+          <li>Active thread replies (unless updating the subject for escalation)</li>
+          <li>Calendar invites</li>
+          <li>Very small audiences</li>
+          <li>Sensitive/emotional topics</li>
+          <li>Micro-updates</li>
+        </ul>
+
+        <div class="callout warn" style="margin-top:12px">
+          <strong>Rule of thumb</strong><br />
+          If removing the tag does not create ambiguity, don’t use one.
+        </div>
       </section>
 
       <section id="tags">
-        <h2>🧭 Core Tags (Approved List)</h2>
-        <p class="muted">Keep this list small and consistent.</p>
+        <h2>🧭 Core Tags</h2>
+        <p class="muted">This list of core tags has been kept small on purpose. These four tags form the core of Conventional Subjects:</p>
+        <pre>[ACTION] [REMINDER] [FYI] [UPDATE]</pre>
+        <p class="muted">There might be a tendency to keep adding more and more tags, but if you get to the point where you need a secret decoder ring to figure out your tagging system, you probably have too many.</p>
+        <p class="muted">Conventional Subjects suggests the following tags as a starting point, separated into two different categories: 1) Things you are asking of others, and 2) Information you are sharing.</p>
 
+        <h3>Things you are asking of others:</h3>
         <div class="grid2">
           <div class="callout">
             <strong>[ACTION]</strong><br />
-            Recipient must do something.
-          </div>
-          <div class="callout">
-            <strong>[REQUEST]</strong><br />
-            Asking for review, input, or feedback.
-          </div>
-          <div class="callout">
-            <strong>[FYI]</strong><br />
-            Awareness only. No action required.
-          </div>
-          <div class="callout">
-            <strong>[UPDATE]</strong><br />
-            Status or progress update.
-          </div>
-          <div class="callout">
-            <strong>[DECISION]</strong><br />
-            Decision made or needed.
+            You are requesting that the recipient do something.
           </div>
           <div class="callout">
             <strong>[REMINDER]</strong><br />
@@ -277,13 +302,76 @@
           </div>
         </div>
 
-        <h3>🛠 Optional Operational Tags</h3>
-        <p class="muted">Use only if relevant to your team.</p>
-        <pre>[RFC]
-[ANNOUNCEMENT]
-[POSTMORTEM]
-[ISSUE]
-[FIX]</pre>
+        <h3 style="margin-top:18px">Optional context with actions</h3>
+        <p class="muted">You can specify what kind of action by adding a context type: <code>[ACTION:TYPE]</code>.</p>
+        <p class="muted"><strong>Common types:</strong></p>
+        <div class="grid2">
+          <div class="callout">
+            <strong>[ACTION:DECISION]</strong><br />
+            A decision is needed
+          </div>
+          <div class="callout">
+            <strong>[ACTION:REVIEW]</strong><br />
+            Review is needed
+          </div>
+          <div class="callout">
+            <strong>[ACTION:APPROVAL]</strong><br />
+            Approval is needed
+          </div>
+          <div class="callout">
+            <strong>[REMINDER:URGENT]</strong><br />
+            Urgent reminder, usually only used in the event of multiple escalations (see escalation ladder later in this document).
+          </div>
+        </div>
+
+        <div class="callout warn" style="margin-top:14px">
+          <strong>Note:</strong> Good subject lines often don't need context added. Compare these two examples:
+          <pre style="margin-top:8px">[ACTION] Review new Policies & Procedures
+[ACTION:REVIEW] New Policies & Procedures</pre>
+          <p class="muted" style="margin-top:8px; margin-bottom:0">Some of this will come down to style preference, but less should be more when it comes to use of tags. Your organization should agree and remain consistent in its use of context types.</p>
+        </div>
+
+        <h3 style="margin-top:18px">Things you are sharing with others (that don't require action):</h3>
+        <div class="grid2">
+          <div class="callout">
+            <strong>[FYI]</strong><br />
+            Awareness only.
+          </div>
+          <div class="callout">
+            <strong>[UPDATE]</strong><br />
+            You are sharing a status or progress update.
+          </div>
+        </div>
+
+        <h3 style="margin-top:18px">🛠 Team-Specific Tags</h3>
+        <p class="muted">Beyond the core tags and optional context types (like <code>[ACTION:REVIEW]</code>), teams may add specialized tags where they provide meaningful, relevant information to your organization. Choose only what adds value—not every team needs custom tags.</p>
+        
+        <h4 style="margin:12px 0 6px 0; font-size:14px">Marketing Teams</h4>
+        <pre style="margin-top:6px">[CAMPAIGN]     Campaign planning or execution
+[CREATIVE]     Creative review or brainstorming
+[BRIEF]        Creative or project brief
+[LAUNCH]       Product or campaign launch coordination</pre>
+
+        <h4 style="margin:12px 0 6px 0; font-size:14px">Engineering Teams</h4>
+        <pre style="margin-top:6px">[RFC]          Request for comments
+[POSTMORTEM]   Incident analysis
+[ISSUE]        Bug or issue tracking
+[FIX]          Bug fix notification</pre>
+
+        <h4 style="margin:12px 0 6px 0; font-size:14px">Sales Teams</h4>
+        <pre style="margin-top:6px">[PROSPECT]     Prospect-related communication
+[DEAL]         Deal progress or negotiation
+[PIPELINE]     Pipeline review or forecast</pre>
+
+        <h4 style="margin:12px 0 6px 0; font-size:14px">Operations/HR</h4>
+        <pre style="margin-top:6px">[POLICY]       Policy updates or changes
+[ONBOARDING]   New hire onboarding
+[SYSTEM]       System updates or maintenance</pre>
+
+        <h4 style="margin:12px 0 6px 0; font-size:14px">Leadership</h4>
+        <pre style="margin-top:6px">[STRATEGIC]    Strategic planning or decision
+[BUDGET]       Budget planning or approval
+[INITIATIVE]   Company-wide initiative</pre>
       </section>
 
       <section id="due-dates">
@@ -303,6 +391,61 @@
         <h3>Avoid</h3>
         <pre>ASAP
 Due 3/4   (ambiguous internationally)</pre>
+      </section>
+
+      <section id="anti-patterns">
+        <h2>🚫 Anti-Patterns</h2>
+        <p>Avoid these common mistakes:</p>
+
+        <div class="grid2">
+          <div class="callout bad">
+            <strong>❌ Tag stacking</strong>
+            <pre>[ACTION][REMINDER]</pre>
+            <p class="muted">Use one tag. Add urgency as a context type when needed (for example, <code>[ACTION:URGENT]</code>).</p>
+          </div>
+
+          <div class="callout bad">
+            <strong>❌ Hiding action inside [FYI]</strong>
+            <p class="muted">If someone must act, use <code>[ACTION]</code>.</p>
+          </div>
+
+          <div class="callout bad">
+            <strong>❌ Vague summaries</strong>
+            <pre>[ACTION] Quick question</pre>
+            <p class="muted">Be specific so subjects stand alone in search results.</p>
+          </div>
+
+          <div class="callout bad">
+            <strong>❌ Inventing new tags</strong>
+            <p class="muted">Stick to the approved list to preserve filterability.</p>
+          </div>
+
+          <div class="callout bad">
+            <strong>❌ Emotional formatting</strong>
+            <pre>[CRITICAL!!!]</pre>
+            <p class="muted">Stay calm and structured. Avoid punctuation escalation.</p>
+          </div>
+
+          <div class="callout bad">
+            <strong>❌ Over-scoping</strong>
+            <pre>[UPDATE:finance-billing-ops-integration]</pre>
+            <p class="muted">Keep scopes short and standardized.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="best-practices">
+        <h2>🧠 Best Practices</h2>
+        <p><strong>⭐ Core Principle: Less is More</strong><br />
+        Good subject lines often don't need context added. If the tag doesn't add clarity, skip it.</p>
+        <ul>
+          <li>Tags are ALL CAPS</li>
+          <li>Always bracketed</li>
+          <li>Always first</li>
+          <li>Keep summaries concise (≤ 60 characters when possible)</li>
+          <li>Keep the approved tag list small</li>
+          <li>Use urgency sparingly</li>
+        </ul>
       </section>
 
       <section id="ladder">
@@ -341,89 +484,49 @@ Due 3/4   (ambiguous internationally)</pre>
         </ul>
       </section>
 
-      <section id="anti-patterns">
-        <h2>🚫 Anti-Patterns</h2>
-        <p>Avoid these common mistakes:</p>
+      <section id="quick-ref">
+        <h2>📋 Quick Reference</h2>
+        
+        <h3>Core Tags</h3>
+        <pre>[ACTION]    You are requesting that the recipient do something
+[REMINDER]  Follow-up on prior communication
+[FYI]       Awareness only
+[UPDATE]    Status or progress update</pre>
 
-        <div class="grid2">
-          <div class="callout bad">
-            <strong>❌ Tag stacking</strong>
-            <pre>[URGENT ACTION REMINDER]</pre>
-            <p class="muted">Use one tag. Two max only if combining urgency.</p>
-          </div>
+        <h3>Format Patterns</h3>
+        <pre>[TAG] Summary
+[TAG:TYPE] Summary
+[TAG] Summary | Due DATE</pre>
 
-          <div class="callout bad">
-            <strong>❌ Hiding action inside [FYI]</strong>
-            <p class="muted">If someone must act, use <code>[ACTION]</code>.</p>
-          </div>
+        <h3>Common Context Types</h3>
+        <pre>[ACTION:DECISION]   A decision is needed
+[ACTION:REVIEW]     Review is needed
+[ACTION:APPROVAL]   Approval is needed
+[REMINDER:URGENT]   Urgent reminder (use sparingly)</pre>
 
-          <div class="callout bad">
-            <strong>❌ Vague summaries</strong>
-            <pre>[ACTION] Quick question</pre>
-            <p class="muted">Be specific so subjects stand alone in search results.</p>
-          </div>
+        <h3>Due Date Formats</h3>
+        <pre>| Due Mar 15
+| Due Fri 3/15
+| Due 2026-03-15   (best for global teams)</pre>
 
-          <div class="callout bad">
-            <strong>❌ Inventing new tags</strong>
-            <p class="muted">Stick to the approved list to preserve filterability.</p>
-          </div>
-
-          <div class="callout bad">
-            <strong>❌ Emotional formatting</strong>
-            <pre>[CRITICAL!!!]</pre>
-            <p class="muted">Stay calm and structured. Avoid punctuation escalation.</p>
-          </div>
-
-          <div class="callout bad">
-            <strong>❌ Over-scoping</strong>
-            <pre>[UPDATE:finance-billing-ops-integration]</pre>
-            <p class="muted">Keep scopes short and standardized.</p>
-          </div>
+        <div class="callout warn" style="margin-top:14px">
+          <strong>Golden Rule</strong><br />
+          If removing the tag doesn't create ambiguity, don't use one.
         </div>
       </section>
 
-      <section id="when-not">
-        <h2>🛑 When NOT to Tag</h2>
-        <p>Do not tag:</p>
-        <ul>
-          <li>Casual 1:1 messages</li>
-          <li>Active thread replies</li>
-          <li>Calendar invites</li>
-          <li>Very small audiences</li>
-          <li>Sensitive/emotional topics</li>
-          <li>Micro-updates</li>
-        </ul>
-
-        <div class="callout warn" style="margin-top:12px">
-          <strong>Rule of thumb</strong><br />
-          If removing the tag does not create ambiguity, don’t use one.
-        </div>
-      </section>
-
-      <section id="best-practices">
-        <h2>🧠 Best Practices</h2>
-        <ul>
-          <li>Tags are ALL CAPS</li>
-          <li>Always bracketed</li>
-          <li>Always first</li>
-          <li>Keep summaries concise (≤ 60 characters when possible)</li>
-          <li>Keep the approved tag list small</li>
-          <li>Use urgency sparingly</li>
-        </ul>
-      </section>
-
-      <section id="examples">
-        <h2>🏢 Example Inbox Snapshot</h2>
-        <pre>[ACTION] Approve 2026 marketing budget | Due Mar 15
-[REQUEST] Review lease compliance memo | Due Mar 22
-[UPDATE:platform] Payments migration 90% complete
-[FYI] Office closed Monday
-[REMINDER] Security training | Due Mar 20
-[DECISION] Vendor selection finalized</pre>
-
-        <div class="callout">
-          <strong>Core Principle</strong><br />
-          Conventional Subjects should reduce cognitive load. If it feels heavy, simplify it.
+      <section id="getting-started">
+        <h2>🚀 Getting Started</h2>
+        <p><strong>Adopting Conventional Subjects in your organization:</strong></p>
+        <ol>
+          <li><strong>Start simple</strong> — Begin with just the 4 core tags: <code>[ACTION]</code> <code>[REMINDER]</code> <code>[FYI]</code> <code>[UPDATE]</code></li>
+          <li><strong>Agree on context types</strong> — If needed, choose 2-3 context types (like <code>[ACTION:REVIEW]</code>) and standardize across your team</li>
+          <li><strong>Lead by example</strong> — Have managers and team leads model the behavior in their emails</li>
+          <li><strong>Review and simplify</strong> — After 30 days, gather feedback and remove anything that isn't adding value</li>
+          <li><strong>Adapt to your needs</strong> — This spec is a starting point; remix it to fit your organization's culture</li>
+        </ol>
+        <div class="callout warn" style="margin-top:14px">
+          <strong>Remember:</strong> The goal is to reduce cognitive load, not add bureaucracy. If it feels heavy, you're doing too much.
         </div>
       </section>
     </main>
