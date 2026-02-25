@@ -51,6 +51,7 @@ Conventional Subjects is a specification (like Conventional Commits) for standar
 - **SPECIFICATION-V1.0-BETA1.md**: Source of truth for spec content
 - **web/index.html**: Rendered semantic HTML version with styling
 - Both must stay in sync; Markdown is editable, HTML is generated or manually mirrored
+- **Version consistency**: The version badge in web/index.html (`<div class="version">V1.0-BETA1</div>`) must match the specification filename. When creating a new version (e.g., V2.0), update both the filename and the HTML badge.
 
 ## Web Implementation
 
