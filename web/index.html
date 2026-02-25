@@ -72,6 +72,18 @@
       color:var(--muted);
       font-size:clamp(14px, 2.2vw, 16px);
     }
+    .version{
+      display:inline-block;
+      margin-top:10px;
+      padding:4px 10px;
+      border-radius:8px;
+      border:1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 85%, transparent);
+      color:var(--muted);
+      font-size:clamp(11px, 2.5vw, 12px);
+      font-weight:600;
+      letter-spacing:0.02em;
+    }
 
     nav{
       margin-top:18px;
@@ -262,6 +274,7 @@
     <header>
       <h1>Conventional Subjects</h1>
       <p><em>Clear, predictable communication for your email subject lines</em></p>
+      <div class="version">V1.0-BETA1</div>
 
       <nav aria-label="Quick links">
         <a class="chip" href="#purpose"><span>#</span> Purpose</a>
