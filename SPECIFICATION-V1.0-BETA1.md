@@ -106,7 +106,7 @@ Common types:
 
 **[ACTION:APPROVAL]** — Approval is needed
 
-**[REMINDER:URGENT]** — Urgent reminder, usually only used in the event of multiple escalations (see escalation ladder below).
+**[REMINDER:URGENT]** — Urgent reminder, usually only used in the event of multiple escalations (see escalation ladder later in this document).
 
 Note: Good subject lines often don't need context added. Compare these two examples:
 
@@ -169,63 +169,7 @@ Due 3/4   (ambiguous internationally)
 
 ---
 
-## 📈 Deadline Escalation Ladder (Advanced)
-
-⚠️ **New to Conventional Subjects?** You can skip this section and come back later.
-
-Deadlines escalate gradually and predictably.
-
-### Stage 1 — Initial Assignment
-
-```
-[ACTION] Submit compliance report | Due Mar 15
-```
-
-Neutral tone. Clear deadline.
-
-### Stage 2 — Reminder (3–5 days prior)
-
-```
-[REMINDER] Submit compliance report | Due Mar 15
-```
-
-Do not escalate urgency prematurely.
-
-### Stage 3 — Due Soon (1–2 days prior)
-
-```
-[ACTION:URGENT] Submit compliance report | Due Mar 15
-```
-
-Escalate only if necessary.
-
-### Stage 4 — Due Today
-
-```
-[ACTION:URGENT] Submit compliance report | Due Mar 15
-```
-
-No emotional language. No punctuation escalation.
-
-### ⚫ Stage 5 — Overdue
-
-```
-[ACTION] Submit compliance report | Overdue
-```
-
-Use formal escalation only if it is required.
-
-### Escalation Principles
-
-* Escalate gradually
-* Change only one variable at a time
-* Preserve credibility of urgent tags
-* Don't over-escalate within the same thread
-* If subject escalation isn't working, escalate via conversation
-
----
-
-## 🚫 Anti-Patterns
+##  Anti-Patterns
 
 Avoid these common mistakes:
 
@@ -285,7 +229,63 @@ Good subject lines often don't need context added. If the tag doesn't add clarit
 
 ---
 
-## 📋 Quick Reference
+## � Deadline Escalation Ladder (Advanced)
+
+⚠️ **New to Conventional Subjects?** You can skip this section and come back later.
+
+Deadlines escalate gradually and predictably.
+
+### Stage 1 — Initial Assignment
+
+```
+[ACTION] Submit compliance report | Due Mar 15
+```
+
+Neutral tone. Clear deadline.
+
+### Stage 2 — Reminder (3–5 days prior)
+
+```
+[REMINDER] Submit compliance report | Due Mar 15
+```
+
+Do not escalate urgency prematurely.
+
+### Stage 3 — Due Soon (1–2 days prior)
+
+```
+[ACTION:URGENT] Submit compliance report | Due Mar 15
+```
+
+Escalate only if necessary.
+
+### Stage 4 — Due Today
+
+```
+[ACTION:URGENT] Submit compliance report | Due Mar 15
+```
+
+No emotional language. No punctuation escalation.
+
+### ⚫ Stage 5 — Overdue
+
+```
+[ACTION] Submit compliance report | Overdue
+```
+
+Use formal escalation only if it is required.
+
+### Escalation Principles
+
+* Escalate gradually
+* Change only one variable at a time
+* Preserve credibility of urgent tags
+* Don't over-escalate within the same thread
+* If subject escalation isn't working, escalate via conversation
+
+---
+
+## �📋 Quick Reference
 
 **Core Tags**
 ```
