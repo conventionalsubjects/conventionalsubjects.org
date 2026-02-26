@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="512" height="512" viewBox="0 0 512 512"
+     role="img" aria-label="Conventional Subjects logo: [CS] dark mode">
+  <title>Conventional Subjects (Dark)</title>
+  <desc>Bracketed CS monogram icon optimized for dark backgrounds.</desc>
+
+  <!-- Transparent background -->
+  <rect width="512" height="512" fill="none"/>
+
+  <!-- Brackets (accent, brighter for dark mode) -->
+  <g fill="none"
+     stroke="#60A5FA"
+     stroke-width="28"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <!-- Left bracket -->
+    <path d="M160 132 H120 V380 H160"/>
+    <!-- Right bracket -->
+    <path d="M352 132 H392 V380 H352"/>
+  </g>
+
+  <!-- CS letters (near-white for dark mode) -->
+  <text x="256" y="308"
+        text-anchor="middle"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial"
+        font-size="168"
+        font-weight="800"
+        letter-spacing="-6"
+        fill="#F9FAFB">
+    CS
+  </text>
+</svg>

@@ -63,6 +63,14 @@ This approach matches [Conventional Commits](https://github.com/conventional-com
 
 ## Web Implementation
 
+**Logo and Favicon**:
+- Two SVG logos maintained: `web/logo-dark.svg` and `web/logo-light.svg`
+- Logos feature [CS] monogram design matching the brand
+- Favicon links in `<head>` use `media="(prefers-color-scheme:)"` to serve correct version
+- Logo also appears in header (left side, 40px-56px responsive size) with inline SVG
+- Both dark and light versions toggled via CSS `@media (prefers-color-scheme:)` selector
+- Keep both SVG logos in sync visually; update both when design changes
+
 **CSS Conventions**:
 - Use CSS custom properties (`:root` variables) for theming (colors, spacing, fonts)
 - Use `clamp()` for responsive typography that scales smoothly across viewports
