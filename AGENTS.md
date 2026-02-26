@@ -1,4 +1,4 @@
-# Copilot Instructions: Conventional Subjects
+# Agent Instructions: Conventional Subjects
 
 ## Purpose
 Conventional Subjects is a specification (like Conventional Commits) for standardizing email subject lines to reduce ambiguity and cognitive load. The project is **V1.0-BETA1**: a foundational, openly adaptable template designed for any organization.
