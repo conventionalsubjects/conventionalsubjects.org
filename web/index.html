@@ -63,14 +63,18 @@
       overflow-wrap:break-word;
       word-wrap:break-word;
       display:flex;
-      align-items:flex-start;
+      flex-direction:column;
+      gap:10px;
+    }
+    .header-top{
+      display:flex;
+      align-items:center;
       gap:16px;
     }
     .logo{
       width:clamp(40px, 8vw, 56px);
       height:clamp(40px, 8vw, 56px);
       flex-shrink:0;
-      margin-top:2px;
     }
     .logo-dark{
       display:none;
@@ -87,9 +91,6 @@
       margin:0 0 6px 0;
       font-size:clamp(28px, 4vw, 40px);
       letter-spacing:-0.02em;
-    }
-    header > div{
-      flex:1;
     }
     header p{
       margin:0;
@@ -296,28 +297,29 @@
 <body>
   <div class="wrap">
     <header>
-      <svg class="logo logo-dark" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conventional Subjects logo">
-        <rect width="512" height="512" fill="none"/>
-        <g fill="none" stroke="#60A5FA" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M160 132 H120 V380 H160"/>
-          <path d="M352 132 H392 V380 H352"/>
-        </g>
-        <text x="256" y="308" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="168" font-weight="800" letter-spacing="-6" fill="#F9FAFB">CS</text>
-      </svg>
-      <svg class="logo logo-light" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conventional Subjects logo">
-        <rect width="512" height="512" fill="none"/>
-        <g fill="none" stroke="#0EA5E9" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M160 132 H120 V380 H160"/>
-          <path d="M352 132 H392 V380 H352"/>
-        </g>
-        <text x="256" y="308" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="168" font-weight="800" letter-spacing="-6" fill="#101828">CS</text>
-      </svg>
-      <div>
+      <div class="header-top">
+        <svg class="logo logo-dark" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conventional Subjects logo">
+          <rect width="512" height="512" fill="none"/>
+          <g fill="none" stroke="#60A5FA" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M160 132 H120 V380 H160"/>
+            <path d="M352 132 H392 V380 H352"/>
+          </g>
+          <text x="256" y="308" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="168" font-weight="800" letter-spacing="-6" fill="#F9FAFB">CS</text>
+        </svg>
+        <svg class="logo logo-light" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conventional Subjects logo">
+          <rect width="512" height="512" fill="none"/>
+          <g fill="none" stroke="#0EA5E9" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M160 132 H120 V380 H160"/>
+            <path d="M352 132 H392 V380 H352"/>
+          </g>
+          <text x="256" y="308" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="168" font-weight="800" letter-spacing="-6" fill="#101828">CS</text>
+        </svg>
         <h1>Conventional Subjects</h1>
-        <p><em>Clear, predictable communication for your email subject lines</em></p>
-        <div class="version">V1.0-BETA1</div>
+      </div>
+      <p><em>Clear, predictable communication for your email subject lines</em></p>
+      <div class="version">V1.0-BETA1</div>
 
-        <nav aria-label="Quick links">
+      <nav aria-label="Quick links">
           <a class="chip" href="#purpose"><span>#</span> Purpose</a>
           <a class="chip" href="#format"><span>#</span> Standard format</a>
           <a class="chip" href="#example-inbox"><span>#</span> Example inbox</a>
@@ -329,8 +331,7 @@
           <a class="chip" href="#ladder"><span>#</span> Escalation (Advanced)</a>
           <a class="chip" href="#quick-ref"><span>#</span> Quick Reference</a>
           <a class="chip" href="#getting-started"><span>#</span> Getting Started</a>
-        </nav>
-      </div>
+      </nav>
     </header>
 
     <main>
