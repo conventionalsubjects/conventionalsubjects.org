@@ -249,7 +249,7 @@ Stay calm and structured. Avoid punctuation escalation.
 **❌ Over-scoping**
 
 ```
-[UPDATE:finance-billing-ops-integration]
+[UPDATE:FINANCE-BILLING-OPS-INTEGRATION]
 ```
 
 Keep scopes short and standardized.
