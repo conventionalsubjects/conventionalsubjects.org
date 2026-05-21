@@ -32,7 +32,7 @@ The Conventional Subjects specification is designed to be a starting point, and 
 `[TAG:TYPE] Short summary`
 
 ```
-[UPDATE:platform] Migration 80% complete
+[UPDATE:PLATFORM] Migration 80% complete
 ```
 
 **Optional Deadline (actionable items only)**
@@ -49,7 +49,7 @@ The Conventional Subjects specification is designed to be a starting point, and 
 ```
 [ACTION] Approve 2026 marketing budget | Due Mar 15
 [ACTION:REVIEW] Review lease compliance memo | Due Mar 22
-[UPDATE:platform] Payments migration 90% complete
+[UPDATE:PLATFORM] Payments migration 90% complete
 [FYI] Office closed Monday
 [REMINDER] Security training | Due Mar 20
 [UPDATE] Vendor selection finalized
@@ -250,7 +250,7 @@ Keep scopes short and standardized.
 **⭐ Core Principle: Less is More**  
 Good subject lines often don't need context added. If the tag doesn't add clarity, skip it.
 
-* Tags are ALL CAPS
+* Tags and context types are ALL CAPS (e.g., `[ACTION:REVIEW]`, `[UPDATE:PLATFORM]`)
 * Always bracketed
 * Always first
 * Keep summaries concise (≤ 60 characters when possible)
