@@ -210,7 +210,7 @@ Due 3/4   (ambiguous internationally)
 
 ---
 
-##  Anti-Patterns
+## 🚫 Anti-Patterns
 
 Avoid these common mistakes:
 
@@ -270,7 +270,7 @@ Good subject lines often don't need context added. If the tag doesn't add clarit
 
 ---
 
-## � Deadline Escalation Ladder (Advanced)
+## 📈 Deadline Escalation Ladder (Advanced)
 
 ⚠️ **New to Conventional Subjects?** You can skip this section and come back later.
 
@@ -326,7 +326,7 @@ Use formal escalation only if it is required.
 
 ---
 
-## �📋 Quick Reference
+## 📋 Quick Reference
 
 **Core Tags**
 ```
