@@ -351,6 +351,13 @@ Use formal escalation only if it is required.
 [REMINDER:URGENT]   Urgent reminder (use sparingly)
 ```
 
+**Topic Scopes** (optional, team-defined)
+```
+[UPDATE:PLATFORM]   Status update scoped to a topic or system
+[FYI:FINANCE]       Awareness scoped to a topic
+```
+Topic scopes are not from a fixed list — use labels that are meaningful to your organization.
+
 **Due Date Formats**
 ```
 | Due Mar 15
