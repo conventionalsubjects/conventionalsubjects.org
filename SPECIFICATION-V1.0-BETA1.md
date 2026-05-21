@@ -123,6 +123,17 @@ Awareness only.
 **[UPDATE]**
 You are sharing a status or progress update.
 
+**Optional topic scope**
+
+For informational tags, you can add a topic scope to indicate what area, system, or domain the email is about:
+
+```
+[UPDATE:PLATFORM] Payments migration 90% complete
+[FYI:FINANCE] Q2 budget approved
+[UPDATE:SECURITY] Certificate renewal complete
+```
+
+Unlike action qualifiers (REVIEW, DECISION, APPROVAL) — which describe *what kind of action* is needed — topic scopes describe *what the email is about*. They are entirely optional, not from any fixed list, and should reflect what's meaningful for your particular organization. Keep them short and consistent within your team.
 
 ### 🛠 Team-Specific Tags
 
