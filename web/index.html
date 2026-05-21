@@ -317,7 +317,7 @@
         <h1>Conventional Subjects</h1>
       </div>
       <p><em>Clear, predictable communication for your email subject lines</em></p>
-      <div class="version">V1.0-BETA1</div>
+      <div class="version">V1.0-BETA2</div>
 
       <nav aria-label="Quick links">
           <a class="chip" href="#purpose"><span>#</span> Purpose</a>
@@ -361,7 +361,7 @@
           <div class="callout good">
             <strong>Optional Context</strong><br />
             <code>[TAG:TYPE] Short summary</code>
-            <pre>[UPDATE:platform] Migration 80% complete</pre>
+            <pre>[UPDATE:PLATFORM] Migration 80% complete</pre>
           </div>
         </div>
 
@@ -376,7 +376,7 @@
         <h2>🏢 Example Inbox Snapshot</h2>
         <pre>[ACTION] Approve 2026 marketing budget | Due Mar 15
 [ACTION:REVIEW] Review lease compliance memo | Due Mar 22
-[UPDATE:platform] Payments migration 90% complete
+[UPDATE:PLATFORM] Payments migration 90% complete
 [FYI] Office closed Monday
 [REMINDER] Security training | Due Mar 20
 [UPDATE] Vendor selection finalized</pre>
@@ -465,6 +465,16 @@
           </div>
         </div>
 
+        <h3 style="margin-top:18px">Optional topic scope</h3>
+        <p class="muted">For informational tags, you can add a topic scope to indicate what area, system, or domain the email is about:</p>
+        <pre>[UPDATE:PLATFORM] Payments migration 90% complete
+[FYI:FINANCE] Q2 budget approved
+[UPDATE:SECURITY] Certificate renewal complete</pre>
+        <div class="callout warn" style="margin-top:12px">
+          <strong>Topic scopes vs. action qualifiers</strong><br />
+          <p class="muted" style="margin:6px 0 0 0">Action qualifiers like <code>REVIEW</code>, <code>DECISION</code>, and <code>APPROVAL</code> describe <em>what kind of action</em> is needed — they come from a known vocabulary. Topic scopes describe <em>what the email is about</em> — they are entirely optional, not from any fixed list, and should reflect what's meaningful for your particular organization. Keep them short and consistent within your team.</p>
+        </div>
+
         <h3 style="margin-top:18px">🛠 Team-Specific Tags</h3>
         <p class="muted">Beyond the core tags and optional context types (like <code>[ACTION:REVIEW]</code>), teams may add specialized tags where they provide meaningful, relevant information to your organization. Choose only what adds value—not every team needs custom tags.</p>
         
@@ -550,7 +560,7 @@ Due 3/4   (ambiguous internationally)</pre>
 
           <div class="callout bad">
             <strong>❌ Over-scoping</strong>
-            <pre>[UPDATE:finance-billing-ops-integration]</pre>
+            <pre>[UPDATE:FINANCE-BILLING-OPS-INTEGRATION]</pre>
             <p class="muted">Keep scopes short and standardized.</p>
           </div>
         </div>
@@ -561,7 +571,7 @@ Due 3/4   (ambiguous internationally)</pre>
         <p><strong>⭐ Core Principle: Less is More</strong><br />
         Good subject lines often don't need context added. If the tag doesn't add clarity, skip it.</p>
         <ul>
-          <li>Tags are ALL CAPS</li>
+          <li>Tags and context types are ALL CAPS (e.g., <code>[ACTION:REVIEW]</code>, <code>[UPDATE:PLATFORM]</code>)</li>
           <li>Always bracketed</li>
           <li>Always first</li>
           <li>Keep summaries concise (≤ 60 characters when possible)</li>
@@ -625,6 +635,11 @@ Due 3/4   (ambiguous internationally)</pre>
 [ACTION:REVIEW]     Review is needed
 [ACTION:APPROVAL]   Approval is needed
 [REMINDER:URGENT]   Urgent reminder (use sparingly)</pre>
+
+        <h3>Topic Scopes <span style="font-weight:normal; color:var(--muted)">(optional, team-defined)</span></h3>
+        <pre>[UPDATE:PLATFORM]   Status update scoped to a topic or system
+[FYI:FINANCE]       Awareness scoped to a topic</pre>
+        <p class="muted" style="margin-top:8px">Topic scopes are not from a fixed list — use labels that are meaningful to your organization.</p>
 
         <h3>Due Date Formats</h3>
         <pre>| Due Mar 15

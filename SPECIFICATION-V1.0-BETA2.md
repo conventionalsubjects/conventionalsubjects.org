@@ -1,4 +1,4 @@
-# Conventional Subjects V1.0-BETA1
+# Conventional Subjects V1.0-BETA2
 
 *Clear, predictable communication for your email subject lines*
 
@@ -32,7 +32,7 @@ The Conventional Subjects specification is designed to be a starting point, and 
 `[TAG:TYPE] Short summary`
 
 ```
-[UPDATE:platform] Migration 80% complete
+[UPDATE:PLATFORM] Migration 80% complete
 ```
 
 **Optional Deadline (actionable items only)**
@@ -49,7 +49,7 @@ The Conventional Subjects specification is designed to be a starting point, and 
 ```
 [ACTION] Approve 2026 marketing budget | Due Mar 15
 [ACTION:REVIEW] Review lease compliance memo | Due Mar 22
-[UPDATE:platform] Payments migration 90% complete
+[UPDATE:PLATFORM] Payments migration 90% complete
 [FYI] Office closed Monday
 [REMINDER] Security training | Due Mar 20
 [UPDATE] Vendor selection finalized
@@ -123,6 +123,17 @@ Awareness only.
 **[UPDATE]**
 You are sharing a status or progress update.
 
+**Optional topic scope**
+
+For informational tags, you can add a topic scope to indicate what area, system, or domain the email is about:
+
+```
+[UPDATE:PLATFORM] Payments migration 90% complete
+[FYI:FINANCE] Q2 budget approved
+[UPDATE:SECURITY] Certificate renewal complete
+```
+
+Unlike action qualifiers (REVIEW, DECISION, APPROVAL) — which describe *what kind of action* is needed — topic scopes describe *what the email is about*. They are entirely optional, not from any fixed list, and should reflect what's meaningful for your particular organization. Keep them short and consistent within your team.
 
 ### 🛠 Team-Specific Tags
 
@@ -238,7 +249,7 @@ Stay calm and structured. Avoid punctuation escalation.
 **❌ Over-scoping**
 
 ```
-[UPDATE:finance-billing-ops-integration]
+[UPDATE:FINANCE-BILLING-OPS-INTEGRATION]
 ```
 
 Keep scopes short and standardized.
@@ -250,7 +261,7 @@ Keep scopes short and standardized.
 **⭐ Core Principle: Less is More**  
 Good subject lines often don't need context added. If the tag doesn't add clarity, skip it.
 
-* Tags are ALL CAPS
+* Tags and context types are ALL CAPS (e.g., `[ACTION:REVIEW]`, `[UPDATE:PLATFORM]`)
 * Always bracketed
 * Always first
 * Keep summaries concise (≤ 60 characters when possible)
@@ -339,6 +350,13 @@ Use formal escalation only if it is required.
 [ACTION:APPROVAL]   Approval is needed
 [REMINDER:URGENT]   Urgent reminder (use sparingly)
 ```
+
+**Topic Scopes** (optional, team-defined)
+```
+[UPDATE:PLATFORM]   Status update scoped to a topic or system
+[FYI:FINANCE]       Awareness scoped to a topic
+```
+Topic scopes are not from a fixed list — use labels that are meaningful to your organization.
 
 **Due Date Formats**
 ```
