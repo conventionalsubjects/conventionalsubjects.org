@@ -1,4 +1,4 @@
-# Conventional Subjects V1.0-BETA1
+# Conventional Subjects V1.0-BETA2
 
 *Clear, predictable communication for your email subject lines*
 
