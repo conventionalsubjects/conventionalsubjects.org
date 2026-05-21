@@ -295,6 +295,8 @@ Do not escalate urgency prematurely.
 ### Stage 3 — Due Soon (1–2 days prior)
 
 ```
+[ACTION] Submit compliance report | Due Tomorrow
+
 [ACTION:URGENT] Submit compliance report | Due Mar 15
 ```
 
@@ -303,7 +305,7 @@ Escalate only if necessary.
 ### Stage 4 — Due Today
 
 ```
-[ACTION:URGENT] Submit compliance report | Due Mar 15
+[ACTION:URGENT] Submit compliance report | Due Today
 ```
 
 No emotional language. No punctuation escalation.
